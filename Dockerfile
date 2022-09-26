@@ -14,7 +14,7 @@ RUN cd /
 
 RUN git clone https://github.com/mkasajim/pihole
 
-RUN cd "Pi-hole/automated install/"
+RUN cd /pihole
 
 WORKDIR /pihole
 
