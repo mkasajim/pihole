@@ -12,10 +12,12 @@ RUN pip3 install -U pip
 
 RUN cd /
 
-RUN git clone --depth 1 https://github.com/pi-hole/pi-hole.git Pi-hole
+RUN git clone https://github.com/mkasajim/pihole
 
 RUN cd "Pi-hole/automated install/"
 
-WORKDIR "/Pi-hole/automated install/"
+WORKDIR /pihole
 
-CMD bash basic-install.sh
+CMD chmod u+x ./pihole.sh
+
+CMD bash ./pihole.sh
